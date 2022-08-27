@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    min-height: 100vh;
+    border: 1px solid black;
+    background-color: rgb(246, 214, 120);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container h2 {
+    text-align: center;
+    margin-top: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.toDoContainer {
+    width: 300px;
+    margin-top: 5px;
+    background: rgb(245, 240, 240);
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.rootToDoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toDoContainer h5 {
+    text-align: center;
+    margin: 5px 0px 10px 0px;
+}
+
+.item {
+    width: 80%;
+    margin: 0px 0px 8px 10%;
+    background: white;
+    text-align: center;
+    min-height: 35px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 4px;
+    transition: 0.1s;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    background-color: rgb(246, 214, 120);
+    border: 1px dashed black;
+    cursor: move;
+}
+
+.plus {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.modal {
+    text-align: center;
+}
+
+.modal > input {
+    margin-top: 20px;
+    width: 50%;
+    padding: 2%;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    outline: none;
+}
+
+.modal button {
+    padding: 0.3%;
+    width: 90px;
+    margin-top: 20px;
+}
+
+.modal div {
+    display: flex;
+    justify-content: center;
+}
+
+.item > svg {
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
 }
